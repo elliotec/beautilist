@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Beautilist::Application.config.secret_key_base = 'd12fa9b4f4a4f31659f6e6afa437947035f44d180ac8814c5828e9499a306df4fc169b0a3d46350e025840486017c7b2644bdf7a52fb6035bc32a97cdb8cca28'
+Howto::Application.config.secret_key_base = 'd0b075293e1f71a41faf4e90fcfdab53e3846207fd5d424801533af4e6e61e870611e1093079a7a5c5ee0ea819395af68ef63b401011027bf876d9d61c7e495a'

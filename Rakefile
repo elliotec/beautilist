@@ -3,4 +3,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Beautilist::Application.load_tasks
+Howto::Application.load_tasks
+MiniTest::Rails::Testing.default_tasks << "features"
