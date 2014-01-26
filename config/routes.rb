@@ -1,4 +1,4 @@
-Howto::Application.routes.draw do
+HowToSite::Application.routes.draw do
   resources :lists do
     resources :steps
   end

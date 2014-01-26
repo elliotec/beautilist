@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Howto::Application.config.secret_key_base = 'd0b075293e1f71a41faf4e90fcfdab53e3846207fd5d424801533af4e6e61e870611e1093079a7a5c5ee0ea819395af68ef63b401011027bf876d9d61c7e495a'
+HowToSite::Application.config.secret_key_base = '111e3403352921647ce9b3b131230659f729ddc44f4f1968167f45acc46789a85767f161042cfe566af4416ce7b955da4007b0453e8b34ff0a1d3ed3c90f81f9'

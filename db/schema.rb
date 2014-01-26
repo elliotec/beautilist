@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140124005517) do
+ActiveRecord::Schema.define(version: 20140124013400) do
 
   create_table "lists", force: true do |t|
     t.string   "name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20140124005517) do
 
   create_table "steps", force: true do |t|
     t.string   "text"
-    t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "list_id"
