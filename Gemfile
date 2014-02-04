@@ -8,22 +8,22 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'minitest-rails-capybara'
-gem 'bootstrap-sass'
-gem 'awesome_nested_set'
-gem 'devise'
+gem 'minitest-rails-capybara', '0.10.0'
+gem 'bootstrap-sass', '3.0.3'
+gem 'awesome_nested_set', '2.1.6'
+gem 'devise', '3.2.2'
 
 group :test do
-  gem 'simplecov'
-  gem 'launchy'
-  gem 'turn'
+  gem 'simplecov', '0.8.2'
+  gem 'launchy', '2.4.2'
+  gem 'turn', '0.9.6'
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'better_errors', '1.1.0'
+  gem 'binding_of_caller', '0.7.2'
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.17.1'
 end
