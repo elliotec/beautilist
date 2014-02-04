@@ -6,6 +6,8 @@
     <%= render 'step_fields', f: builder %>
   <% end %>
 
+<%#= f.select :parent_id, nested_set_options(NestedList, @list) {|i| "#{'-' * i.level} #{i.name}" } %>
+<%#= select_tag 'parent_id', options_for_select(nested_set_options(NestedList) {|i| "#{'-' * i.level} #{i.name}" } ) %>
 <%= link_to_add_fields "Add Step", f, :steps %><br/><br/>
 <%= f.submit class: "btn btn-success"%>
 <% end %>
