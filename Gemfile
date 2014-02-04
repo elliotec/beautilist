@@ -11,9 +11,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'better_errors'
 gem 'minitest-rails-capybara'
 gem 'bootstrap-sass'
-gem 'simplecov'
-
+gem 'awesome_nested_set'
+gem 'devise'
 group :test do
+  gem 'simplecov'
   gem 'launchy'
   gem 'turn'
 end

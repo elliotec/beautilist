@@ -11,10 +11,13 @@
       <td>
         <h3><%= list.name %></h3>
       </td>
+      <td>  </td>
+      <td>  </td>
+      <td>  </td>
       <td>
-        <%= link_to 'Show', list %>
-        <%= link_to 'Edit', edit_list_path(list) %>
-        <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Show', list, class: "btn btn-default btn-info btn-xs" %>
+        <%= link_to 'Edit', edit_list_path(list), class: "btn btn-default btn-warning btn-xs" %>
+        <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger btn-xs" %>
       </td>
     </tr>
   <% end %>

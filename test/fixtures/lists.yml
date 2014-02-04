@@ -1,7 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+cr:
+  list: Code Rails
+  step: This is how I learned web development!
 
-one:
-  name: MyString
-
-two:
-  name: MyString
