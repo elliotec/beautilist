@@ -6,7 +6,7 @@
     <%#= render 'step_fields', f: builder %>
   <%# end %>
 
-  <p>Sub list
+  Sub-list
     <% @list.children.each do |sub| %>
       <%= f.fields_for :children, sub do |child| %>
         <%#= child.label :name %>
@@ -15,7 +15,6 @@
         <div class="actions"><%= f.submit "Save" %></div>
       <% end %>
     <% end %>
-  </p>
 
 
 <%#= link_to_add_fields "Add Step", f, :steps %><br/>
