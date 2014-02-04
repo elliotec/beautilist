@@ -1,6 +1,6 @@
 <h1><%= @list.name %></h1>
 <ol>
-  <% @list.steps.each do |s| %>
-    <li><%= s.text %></li>
+  <% @list.children.each do |list| %>
+    <li><%= list.name %></li>
   <% end %>
 </ol>

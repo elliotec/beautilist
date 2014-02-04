@@ -2,12 +2,22 @@
   <%= f.label :name %>:
   <%= f.text_field :name %><br/>
 
-  <%= f.fields_for :steps do |builder| %>
-    <%= render 'step_fields', f: builder %>
-  <% end %>
+  <%#= f.fields_for :steps do |builder| %>
+    <%#= render 'step_fields', f: builder %>
+  <%# end %>
+
+  <p>Sub list
+    <% @list.children.each do |sub| %>
+      <%= f.fields_for :children, sub do |child| %>
+        <%= child.label :name %>
+        <%= child.text_field :name %><br>
+        <div class="actions"><%= f.submit "Save" %></div>
+      <% end %>
+    <% end %>
+  </p>
 
 <%= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %>
-<%#= select_tag 'parent_id', options_for_select(nested_set_options(List) {|i| "#{'-' * i.level} #{i.name}" } ) %>
-<%= link_to_add_fields "Add Step", f, :steps %><br/><br/>
+
+<%#= link_to_add_fields "Add Step", f, :steps %><br/><br/>
 <%= f.submit class: "btn btn-success"%>
 <% end %>

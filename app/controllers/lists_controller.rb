@@ -7,6 +7,7 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
+    @list.children.build
   end
 
   def create
@@ -41,6 +42,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, steps_attributes: [:text, :id, :_destroy])
+    params.require(:list).permit(:name, :parent_id, children_attributes: [:name, :id, :_destroy])
   end
 end
