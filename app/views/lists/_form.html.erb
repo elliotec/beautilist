@@ -1,20 +1,25 @@
-<%= form_for(@list) do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br/>
+<%= form_for(@list) do |form| %>
+  <%= form.label :name %>:
+  <%= form.text_field :name %><br/>
+
+  <% @list.children.each do |child| %>
+    <%= form.fields_for :children, child do |f| %>
+      <%= render "child_fields", f: f, child: child %>
+    <% end %>
+  <% end %>
+  <%= link_to_add_fields "Add", form, :children %><br>
+
+  <%= form.submit class: "btn btn-success"%>
+<% end %>
+
+
+
+
+
+
+
+
 
   <%#= f.fields_for :steps do |builder| %>
     <%#= render 'step_fields', f: builder %>
   <%# end %>
-    <% @list.children.each do |sub| %>
-      <%= f.fields_for :children, sub do |child| %>
-        <%#= child.text_field :name %><br>
-        <%#= f.hidden_field :_destroy %>
-        <%#= link_to "remove", '#', class: "remove_fields" %><br>
-        <%= link_to_add_fields "Add", f, :children %><br>
-        <%#= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %><br>
-      <% end %>
-    <% end %>
-
-
-<%= f.submit class: "btn btn-success"%>
-<% end %>
