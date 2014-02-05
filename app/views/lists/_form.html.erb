@@ -7,11 +7,11 @@
   <%# end %>
     <% @list.children.each do |sub| %>
       <%= f.fields_for :children, sub do |child| %>
-        <%= child.text_field :name %><br>
-        <%= f.hidden_field :_destroy %>
-        <%= link_to "remove", '#', class: "remove_fields" %><br>
+        <%#= child.text_field :name %><br>
+        <%#= f.hidden_field :_destroy %>
+        <%#= link_to "remove", '#', class: "remove_fields" %><br>
         <%= link_to_add_fields "Add", f, :children %><br>
-        <%= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %><br>
+        <%#= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %><br>
       <% end %>
     <% end %>
 

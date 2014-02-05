@@ -42,6 +42,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, :parent_id, children_attributes: [:name, :id, :_destroy])
+    params.require(:list).permit(:name, :parent_id, children_attributes: [:name, :parent_id, :id, :_destroy])
   end
 end
