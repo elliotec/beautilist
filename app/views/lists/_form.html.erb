@@ -5,18 +5,16 @@
   <%#= f.fields_for :steps do |builder| %>
     <%#= render 'step_fields', f: builder %>
   <%# end %>
-
-  Sub-list
     <% @list.children.each do |sub| %>
       <%= f.fields_for :children, sub do |child| %>
-        <%#= child.label :name %>
         <%= child.text_field :name %><br>
-        <%= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %>
-        <div class="actions"><%= f.submit "Save" %></div>
+        <%= f.hidden_field :_destroy %>
+        <%= link_to "remove", '#', class: "remove_fields" %><br>
+        <%= link_to_add_fields "Add", f, :children %><br>
+        <%= f.select :parent_id, nested_set_options(List, @list) {|i| "#{'-' * i.level} #{i.name}" } %><br>
       <% end %>
     <% end %>
 
 
-<%#= link_to_add_fields "Add Step", f, :steps %><br/>
 <%= f.submit class: "btn btn-success"%>
 <% end %>
