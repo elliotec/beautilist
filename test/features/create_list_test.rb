@@ -1,11 +1,10 @@
 require "test_helper"
 
-feature "Creating a list" do
+feature "Creating a nested list" do
   scenario "submit form data to create a new list" do
     visit new_list_path
-    fill_in "list", with: lists(:cr).list
-    fill_in "step", with: lists(:cr).step
+    fill_in "Name", with: lists(:cr).name
     click_on "Create List"
-    page.text.must_include lists(:cr).list
+    page.text.must_include lists(:cr).name
   end
 end

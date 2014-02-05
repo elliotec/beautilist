@@ -3,7 +3,6 @@ require File.expand_path('../../config/environment', __FILE__)
 require "rails/test_help"
 require "minitest/rails/capybara"
 require "turn"
-require "minitest/pride"
 require "simplecov"
 SimpleCov.start 'rails'
 
