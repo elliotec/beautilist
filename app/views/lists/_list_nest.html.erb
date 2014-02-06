@@ -1,7 +1,7 @@
 <% toplevel = @incomplete.where(parent_id: nil) %>
 <% for top in toplevel %>
   <h3>
-    <%= top.name %>
+    <%= render :partial =>  "list", :locals => { :list => top } %>
   </h3>
     <% for i in top.children %>
       <%= render :partial => "list_items", :locals => { :top => i } %>
