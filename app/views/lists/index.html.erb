@@ -3,7 +3,7 @@
     <div id="incomplete" class="well well-lg">
         <h3>Lists</h3>
           <%= render @incomplete %>
-          <%= render 'list_nest' %>
+          <%= render :partial => "list_nest", :locals => { :currentlevel => @incomplete.where(parent_id: nil) } %>
       </ul>
       </div>
         <%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
