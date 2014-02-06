@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '3.0.3'
 gem 'awesome_nested_set', '2.1.6'
 gem 'devise', '3.2.2'
 
+
 group :test do
   gem 'simplecov', '0.8.2'
   gem 'launchy', '2.4.2'
@@ -22,6 +23,7 @@ end
 group :development do
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
+  gem 'pry-rails'
 end
 
 group :production do
