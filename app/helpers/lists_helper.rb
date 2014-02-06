@@ -1,15 +1,4 @@
 module ListsHelper
-  def expand_list(list)
-    if list.children.empty?
-      render inline: "<%= " + list.name + " %>"
-    else
-      for i in list.children.all
-        return expand_list(i)
-      end
-    end
-  end
-
-
   def nested_li(objects, &block)
     objects = objects.order(:lft) if objects.is_a? Class
 

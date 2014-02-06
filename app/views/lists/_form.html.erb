@@ -1,6 +1,6 @@
 <%= form_for @list do |form| %>
-  <%= form.label :name %>:
-  <%= form.text_field :name %><br/>
+  <%= form.label "Title: " %>
+  <%= form.text_field :name %><br/><br/>
 
 
   <% @list.children.each do |child| %>
@@ -8,7 +8,7 @@
       <%= render "child_fields", f: f, child: child %>
     <% end %>
   <% end %>
-  <%= link_to_add_fields "Add", form, :children %><br>
+  <%= link_to_add_fields "Add item", form, :children %></br></br>
 
 
   <%= form.submit class: "btn btn-success"%>
