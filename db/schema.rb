@@ -19,17 +19,10 @@ ActiveRecord::Schema.define(version: 20140206021204) do
     t.integer "rgt"
     t.integer "lft"
     t.integer "depth"
-    t.boolean "complete",  default: false
+    t.boolean "complete",  default: false, null: false
   end
 
   add_index "lists", ["rgt", "lft", "depth", "parent_id"], name: "index_lists_on_rgt_and_lft_and_depth_and_parent_id"
-
-  create_table "steps", force: true do |t|
-    t.string   "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "list_id"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
