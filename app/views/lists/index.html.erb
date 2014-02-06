@@ -1,10 +1,12 @@
 <div class="row">
   <div class="col-md-8">
     <div id="incomplete" class="well well-lg">
-      <%= render @incomplete %>
-
-        <br><%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
+      <ul class="list-group">
+        <h3>Lists</h3>
+          <li class="list-group-item"><%= render @incomplete %></li>
+      </ul>
       </div>
+        <%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
     </div>
     <div class="col-md-4">
       <div id="complete" class="well well-lg"> 
