@@ -1,8 +1,0 @@
-<% for item in currentlevel %>
-  <ul><%= render :partial =>  "list", :locals => { :list => item } %>
-  <% unless item.children.empty? %>
-    <% for child in item.children.all %>
-      <li><%= render :partial => "list_test", :locals => { :currentlevel => child } %></li>
-    <% end %>
-  <% end %></ul>
-<% end %>
