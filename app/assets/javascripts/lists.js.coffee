@@ -14,3 +14,11 @@ $(document).on 'click', 'form .add_fields', (event) ->
   $(this).before($(this).data('fields').replace(regexp, time))
   event.preventDefault()
 
+jQuery.fn.submitOnCheck = ->
+  @find('input[type=submit]').remove()
+  @find('input[type=checkbox]').click ->
+    $(this).parent('form').submit()
+  this
+  
+jQuery ->
+  $('.edit_list').submitOnCheck()
