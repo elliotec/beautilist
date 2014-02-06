@@ -1,0 +1,8 @@
+<% unless top.children.empty? %>
+  <ul><% for item in top.children %>
+    <li>
+      <%= item.name %><%= link_to 'Edit', edit_list_path(item), class: "btn btn-default btn-warning btn-xs" %>
+    </li>
+    <%= render :partial => "list_items", :locals => { :top => item } %>
+  <% end %></ul>
+<% end %>

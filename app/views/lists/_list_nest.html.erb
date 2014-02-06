@@ -1,9 +1,9 @@
-<li>
-  <%= List.name %>
-
-  <% unless List.children.empty? %>
-    <ul>
-      <%= render List.children %>
-    </ul>
-  <% end %>
-</li>
+<% toplevel = @incomplete.where(parent_id: nil) %>
+<% for top in toplevel %>
+  <h3>
+    <%= top.name %>
+  </h3>
+    <% for i in top.children %>
+      <%= render :partial => "list_items", :locals => { :top => i } %>
+    <% end %>
+<% end %>
