@@ -1,0 +1,5 @@
+<% if @list.complete? %>
+  $('#edit_list_<%= @list.id %>').appendTo('#complete');
+<% else %>
+  $('#edit_list_<%= @list.id %>').appendTo('#incomplete');
+<% end %>

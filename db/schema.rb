@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204202022) do
+ActiveRecord::Schema.define(version: 20140206021204) do
 
   create_table "lists", force: true do |t|
     t.string  "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140204202022) do
     t.integer "rgt"
     t.integer "lft"
     t.integer "depth"
+    t.boolean "complete",  default: false
   end
 
   add_index "lists", ["rgt", "lft", "depth", "parent_id"], name: "index_lists_on_rgt_and_lft_and_depth_and_parent_id"

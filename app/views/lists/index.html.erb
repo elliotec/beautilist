@@ -1,27 +1,7 @@
 <div class="row">
-  <div class="col-md-8">
+  <div id="incomplete" class="col-md-8">
     <div class="well well-lg">
-        <table>
-          <tr>
-            <th>
-              <h2>List</h2>
-            </th>
-          </tr>
-          <% @lists.each do |list| %>
-            <tr>
-              <td><%=  %></td>
-              <td>
-                <h4><%= list.name %></h4>
-              </td>
-              <td>  </td>
-              <td>
-                <%= link_to 'Show', list, class: "btn btn-default btn-info btn-xs" %>
-                <%= link_to 'Edit', edit_list_path(list), class: "btn btn-default btn-warning btn-xs" %>
-                <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger btn-xs" %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
+      <%= render @incomplete %>
 
         <br><%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
       </div>
@@ -29,6 +9,7 @@
     <div id="complete" class="col-md-4">
       <div class="well well-lg"> 
         <h3>Complete</h3>
+        <%= render @complete %>
       </div>
     </div>
 </div>
