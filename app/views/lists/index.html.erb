@@ -1,26 +1,15 @@
-<h1>Lists</h1>
+<div class="row">
+  <div id="incomplete" class="col-md-8">
+    <div class="well well-lg">
+      <%= render @incomplete %>
 
-<table>
-  <tr>
-    <th>
-      <h2>Name</h2>
-    </th>
-  </tr>
-  <% @lists.each do |list| %>
-    <tr>
-      <td>
-        <h3><%= list.name %></h3>
-      </td>
-      <td>  </td>
-      <td>  </td>
-      <td>  </td>
-      <td>
-        <%= link_to 'Show', list, class: "btn btn-default btn-info btn-xs" %>
-        <%= link_to 'Edit', edit_list_path(list), class: "btn btn-default btn-warning btn-xs" %>
-        <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger btn-xs" %>
-      </td>
-    </tr>
-  <% end %>
-</table>
-
-</br></br><%= link_to 'Add new list', new_list_path, class: "btn btn-primary" %>
+        <br><%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
+      </div>
+    </div>
+    <div id="complete" class="col-md-4">
+      <div class="well well-lg"> 
+        <h3>Complete</h3>
+        <%= render @complete %>
+      </div>
+    </div>
+</div>

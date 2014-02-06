@@ -3,6 +3,8 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all.where(parent_id: nil)
+    @incomplete = List.where(complete: false)
+    @complete = List.where(complete: true)
   end
 
   def new
@@ -12,8 +14,11 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    if @list.save
-      redirect_to lists_path
+    respond_to do |format|
+      if @list.save
+        format.html { redirect_to lists_path }
+        format.js
+      end
     end
   end
 
@@ -25,14 +30,19 @@ class ListsController < ApplicationController
   end
 
   def update
-    if @list.update(list_params)
-      redirect_to lists_path
+    respond_to do |format|
+      if @list.update(list_params)
+        format.html { redirect_to lists_path }
+        format.js
+      end
     end
   end
 
   def destroy
-    if @list.destroy
-      redirect_to lists_path
+    @list.destroy
+    respond_to do |format|
+      format.html { redirect_to lists_path }
+      format.js
     end
   end
 
@@ -43,6 +53,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, :parent_id, children_attributes: [:name, :parent_id, :id, :_destroy])
+    params.require(:list).permit(:name, :parent_id, :complete, children_attributes: [:name, :parent_id, :id, :_destroy])
   end
 end
