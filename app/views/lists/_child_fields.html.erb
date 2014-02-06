@@ -1,4 +1,6 @@
-<p style="padding-left:20px"><%= f.label "Item: " %>
-<%= f.text_field :name %><br>
-<%= f.hidden_field :_destroy %>
-<%= link_to "remove", '#', class: "remove_fields" %></p>
+<fieldset>
+  <p style="padding-left:20px"><%= f.label "Item: " %>
+  <%= f.text_field :name %><br>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "remove", '#', class: "remove_fields" %></p>
+</fieldset>
