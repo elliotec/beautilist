@@ -1,8 +1,6 @@
 <h1><%= @list.name %></h1>
-<ul>
-  <% @list.children.each do |list| %>
-    <li><%= list.name %></li>
-      <ul><%= list.children.name %></ul>
-        <li><%= list.name %></li>
+<div class="list">
+  <%= nested_li(@list.children) do |list| %>
+    <%= list.name %>
   <% end %>
-</ul>
+</div>
