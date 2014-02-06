@@ -1,6 +1,12 @@
-<h1><%= @list.name %></h1>
+<!--<h1><%#= @list.name %></h1>
 <div class="list">
-  <%= nested_li(@list.children) do |list| %>
-    <%= list.name %>
+  <%#= nested_li(@list.children) do |list| %>
+    <%#= list.name %>
+  <%# end %>
+</div>-->
+
+<ul>
+  <% List.roots.each do |node| %>
+    <%= render node %>
   <% end %>
-</div>
+</ul>

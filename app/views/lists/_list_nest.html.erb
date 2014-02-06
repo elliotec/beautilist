@@ -1,0 +1,9 @@
+<li>
+  <%= List.name %>
+
+  <% unless List.children.empty? %>
+    <ul>
+      <%= render List.children %>
+    </ul>
+  <% end %>
+</li>
