@@ -3,6 +3,7 @@ class ListsController < ApplicationController
 
   def index
     #@lists = List.all.where(parent_id: nil)
+    #@children = @list('lft ASC')
     @incomplete = List.where(complete: false)
     @complete = List.where(complete: true)
   end
