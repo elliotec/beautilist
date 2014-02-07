@@ -12,6 +12,7 @@ gem 'minitest-rails-capybara', '0.10.0'
 gem 'bootstrap-sass', '3.0.3'
 gem 'awesome_nested_set', '2.1.6'
 gem 'devise', '3.2.2'
+gem 'pundit', '0.2.1'
 
 
 group :test do
