@@ -2,8 +2,6 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   def index
-    #@lists = List.all.where(parent_id: nil)
-    #@children = @list('lft ASC')
     @incomplete = List.where(complete: false).where(depth: 0)
     @complete = List.where(complete: true)
   end
