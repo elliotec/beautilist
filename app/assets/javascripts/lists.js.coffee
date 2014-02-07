@@ -19,6 +19,7 @@ jQuery.fn.submitOnCheck = ->
   @find('input[type=checkbox]').click ->
     $(this).parent('form').submit()
   this
-  
+
 jQuery ->
   $('.edit_list').submitOnCheck()
+

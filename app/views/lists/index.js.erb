@@ -1,0 +1,19 @@
+var items = $('div#incomplete').children().find('form');
+var size = $('div#incomplete').children().find('form').length;
+for ( var i = 0; i < size; i++ ) {
+  if (items[i].('#list[complete]').checked) {
+
+  }
+
+  // if( items[i].find('input:checkbox:first').attr('value') == 1 ) {
+  //     items
+  // }
+  //console.log( "try " + i );
+}
+
+($("div#incomplete" ).children().find('form')).each(function( index ) {
+  if ($(this).is(':checked') ) {
+    console.log("true");
+    //$(this).parent.parent.remove;
+  }
+});

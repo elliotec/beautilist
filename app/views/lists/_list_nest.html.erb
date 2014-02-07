@@ -1,13 +1,13 @@
 <% for item in currentlevel %>
   <%= render :partial =>  "list", :locals => { :list => item } %>
   <% unless item.children.empty? %>
-
-    <ul><% for child in item.children.all %>
-      <li>
-          <%= render :partial =>  "list", :locals => { :list => child } %>
-          <ul><%= render :partial => "list_nest", :locals => { :currentlevel => child.children } %></ul>
-      </li>
-    <% end %></ul>
-
+    <div class="tree">
+      <ul><% for child in item.children.all %>
+        <li>
+            <%= render :partial =>  "list", :locals => { :list => child } %>
+            <ul><%= render :partial => "list_nest", :locals => { :currentlevel => child.children } %></ul>
+        </li>
+      <% end %></ul>
+    </div>
   <% end %>
 <% end %>

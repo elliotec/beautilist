@@ -1,1 +1,4 @@
-$('#edit_list_<%= @list.id %>').remove();
+var list = $('#edit_list_<%= @list.id %>'),
+    siblings = list.siblings('.tree')[0];
+siblings.remove();
+list.remove();
