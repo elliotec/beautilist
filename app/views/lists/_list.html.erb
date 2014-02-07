@@ -1,8 +1,8 @@
 <%= form_for list, remote: true do |f| %>
   <%= f.check_box :complete %>
-  <%= f.submit "Update" %>
+  <%= f.submit 'Update' %>
   <%= f.label :complete, list.name %>
-  <%= link_to 'Show', list, class: "btn btn-default btn-info btn-xs" %>
-  <%= link_to 'Edit', edit_list_path(list), class: "btn btn-default btn-warning btn-xs" %>
-  <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-danger btn-xs", remote: true %>
+  <%#= link_to 'Show', list, class: "btn btn-default btn-info btn-xs" %>
+  <%= link_to '', edit_list_path(list), class: "glyphicon glyphicon-pencil" %>
+  <%= link_to '', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-remove", remote: true %>
 <% end %>

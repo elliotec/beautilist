@@ -26,6 +26,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list.children.build
   end
 
   def update
