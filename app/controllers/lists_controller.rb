@@ -3,8 +3,8 @@ class ListsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @incomplete = List.where(complete: false).where(parent_id: nil)
-    @complete = List.where(complete: true)
+    @incomplete = List.where(complete: false).where(user_id: current_user.id)
+    @complete = List.where(complete: true).where(user_id: current_user.id)
   end
 
   def new
@@ -13,7 +13,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.build(list_params)
     respond_to do |format|
       if @list.save
         format.html { redirect_to lists_path }
