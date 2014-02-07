@@ -1,35 +1,35 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/elliotec/codefellows/Beautilist/app/models/list.rb": [
+      "/Users/elliotec/codefellows/oldbeaut/beautilist/app/models/list.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/elliotec/codefellows/Beautilist/app/controllers/lists_controller.rb": [
+      "/Users/elliotec/codefellows/oldbeaut/beautilist/app/controllers/lists_controller.rb": [
         1,
         1,
         null,
         1,
         null,
         null,
-        0,
-        0,
-        null,
-        null,
-        1,
         1,
         1,
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
         null,
         null,
         null,
@@ -39,15 +39,6 @@
         null,
         null,
         1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
         null,
         null,
         1,
@@ -58,6 +49,15 @@
         null,
         null,
         null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         1,
         null,
         1,
@@ -65,11 +65,11 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
-      "/Users/elliotec/codefellows/Beautilist/app/controllers/application_controller.rb": [
+      "/Users/elliotec/codefellows/oldbeaut/beautilist/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -77,6 +77,6 @@
         null
       ]
     },
-    "timestamp": 1391680432
+    "timestamp": 1391732248
   }
 }

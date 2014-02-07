@@ -40,10 +40,10 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_path }
       format.js
+      @list.destroy
     end
   end
 
