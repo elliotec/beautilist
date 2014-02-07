@@ -1,19 +1,29 @@
-<h2>Sign up</h2>
-<form class="form-horizontal" role="form" >
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Sign up</h1>
+  </div>
 
-    <div class="form-group"><%= f.label :email, class: "col-sm-2 control-label" %><br />
-    <div class="col-sm-10"><%= f.email_field :email, :autofocus => true %></div></div>
+  <div class="panel-body">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-    <div class="form-group"><%= f.label :password %><br />
-    <%= f.password_field :password %></div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div>
 
-    <div class="form-group"><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
 
-    <div><%= f.submit "Sign up", class: "btn btn-default" %></div>
-  <% end %>
-</form>
+      <div class="form-group">
+        <%= f.submit "Sign up", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
 
-<%= render "devise/shared/links" %>
+  <div class="panel-footer">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

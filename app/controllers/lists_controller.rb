@@ -3,7 +3,7 @@ class ListsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @incomplete = List.where(complete: false).where(depth: 0)
+    @incomplete = List.where(complete: false).where(parent_id: nil)
     @complete = List.where(complete: true)
   end
 
