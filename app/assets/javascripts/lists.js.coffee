@@ -20,6 +20,6 @@ jQuery.fn.submitOnCheck = ->
     $(this).parent('form').submit()
   this
 
-jQuery ->
+$(document).on 'ready page:load', ->
   $('.edit_list').submitOnCheck()
-
+  $('#incomplete form').has('input:checkbox:checked').remove()

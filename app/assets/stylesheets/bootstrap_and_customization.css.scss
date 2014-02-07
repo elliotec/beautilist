@@ -1,5 +1,6 @@
 $navbar-inverse-bg: #2c3e50;
 $navbar-inverse-link-color: white;
-
+$link-color: #555;
+$link-hover-color: darken($link-color, 25%) !default;
 
 @import 'bootstrap';

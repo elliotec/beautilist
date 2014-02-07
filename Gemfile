@@ -13,7 +13,7 @@ gem 'bootstrap-sass', '3.0.3'
 gem 'awesome_nested_set', '2.1.6'
 gem 'devise', '3.2.2'
 gem 'pundit', '0.2.1'
-gem 'jquery-turbolinks', '2.0.1'
+#gem 'jquery-turbolinks', '2.0.1'
 
 group :test do
   gem 'simplecov', '0.8.2'
@@ -29,4 +29,5 @@ end
 
 group :production do
   gem 'pg', '0.17.1'
+  gem 'rails_12factor'
 end
