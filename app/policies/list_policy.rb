@@ -1,4 +1,0 @@
-class ListPolicy < ApplicationPolicy
-
-
-end
