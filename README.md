@@ -21,3 +21,8 @@ Contact Us
 @joelsmith
 
 Follow our repository, fork if you like, fix what you want, let us know what we can improve.
+
+License
+====
+
+[MIT](http://elliotec.mit-license.org)
