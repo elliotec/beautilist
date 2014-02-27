@@ -6,9 +6,9 @@
       </div>
         <%= link_to 'New list', new_list_path, id: "new_link", remote: true, class: "btn btn-primary"%>
     </div>
-    <div class="col-md-4">
-      <div id="complete" class="well well-lg">
+    <div class="col-md-4 well well-lg">
         <h3>Complete</h3>
+      <div id="complete">
         <%= render @complete %>
       </div>
     </div>
