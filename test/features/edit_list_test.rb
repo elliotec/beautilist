@@ -4,10 +4,7 @@ feature "editing a list" do
   scenario "submit updates to an existing list" do
     sign_in
     
-    visit lists_path
-    click_on "New list"
-    fill_in "list_name", with: lists(:cr).name
-    click_on "Create List"
+    create_fixture
     #save_and_open_page
 
     first("[class='glyphicon glyphicon-pencil']").click

@@ -16,4 +16,10 @@ class ActiveSupport::TestCase
     fill_in "Password", with: "password1"
     page.find("[type='submit']").click  
   end
+  def create_fixture
+    visit lists_path
+    click_on "New list"
+    fill_in "list_name", with: lists(:cr).name
+    click_on "Create List"
+  end
 end

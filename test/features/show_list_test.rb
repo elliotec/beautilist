@@ -6,13 +6,9 @@ feature "show a list" do
     
     visit lists_path
 
-    click_on "New list"
-    fill_in "list_name", with: lists(:cr).name
-    click_on "Create List"
-    #save_and_open_page
+    create_fixture
 
     first("[class='glyphicon glyphicon-glass']").click
-    #click_on "Edit"
 
     page.text.must_include "Code Rails"
   end
