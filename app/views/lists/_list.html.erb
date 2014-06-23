@@ -2,6 +2,7 @@
   <%= f.check_box :complete %>
   <%= f.submit 'Update' %>
   <%= f.label :complete, list.name %>
+  <%= link_to '', list_path(list), class: "glyphicon glyphicon-glass" %>
   <%= link_to '', edit_list_path(list), class: "glyphicon glyphicon-pencil" %>
   <%= link_to '', list, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-remove", remote: true %>
 <% end %>
