@@ -16,3 +16,9 @@ ul {list-style-type: none;}
 li {list-style-type: none;}
 a {padding: 1em;
   text-decoration: none;}
+  
+#incomplete {
+  width: auto;
+  height: auto;
+  overflow: scroll;
+}
